@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout Page</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <div class="logout-container">
+        <h2>Logout</h2>
+        <form id="logoutForm" action="/logout" method="POST">
+            <button type="submit">Logout</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('logoutForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the standard form submission
+
+            // Log out the user
+            alert('You have been logged out');
+            // Redirect to the login page
+            window.location.href = 'login.html';
+        });
+    </script>
+</body>
+</html>
